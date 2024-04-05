@@ -49,7 +49,7 @@ for (let i = 0; i < NUM_USERS; i++) {
 
 export const handlers = [
   http.get("fakeApi/users", async function () {
-    const users = db.user.getAll().map();
+    const users = db.users.getAll();
     await delay(ARTIFICIAL_DELAY_MS);
 
     return HttpResponse.json(users);
